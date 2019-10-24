@@ -34,5 +34,5 @@ docker run -d \
 
 
 for i in 22181 32181 42181; do
-  docker run --net=host --rm confluentinc/cp-zookeeper:5.0.0 bash -c "echo stat | nc localhost $i | grep Mode"
+  docker run --net=host --rm wurstmeister/zookeeper bash -c "echo stat | nc localhost $i | grep Mode"
 done
